@@ -200,7 +200,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   // favicon ikut gonta-ganti warna titik
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const fav = document.getElementById('fav'), urut = ['favicon-getit-amber.svg', 'favicon-getit-biru.svg', 'favicon-getit-oranye.svg']
-    let i = 0; setInterval(() => { if (document.hidden) return; fav.href = urut[i]; i = (i + 1) % urut.length }, 1200)
+    let i = 0; setInterval(() => { if (document.hidden || !fav) return; fav.href = urut[i]; i = (i + 1) % urut.length }, 1200)
   }
 })()
 </script>
