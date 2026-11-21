@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>get it</title>
-<meta name="description" content="get it: skill, kerja, dan hobi. Tiga tempat buat kamu yang baru mulai.">
+<meta name="description" content="get it: skill, kerja, hobi, dan sehat. Empat tempat buat kamu yang baru mulai.">
 <meta name="theme-color" content="#F2F4F7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B0F17" media="(prefers-color-scheme: dark)">
 <link rel="icon" id="fav" href="favicon-getit.svg" type="image/svg+xml">
@@ -16,8 +16,8 @@
 :root {
   --bg: #F2F4F7; --panel: #FFFFFF; --panel-2: #F6F7F9; --ink: #0E1525; --ink-2: #2A3245; --redup: #5B6577;
   --garis-ui: #DFE3EA; --garis-kuat: #C3CAD6; --titik: rgba(14, 21, 37, .075);
-  --skill: #F5A300; --job: #378ADD; --hobby: #D85A30;
-  --skill-t: #C98200; --job-t: #2F7BCF; --hobby-t: #D2552B;
+  --skill: #F5A300; --job: #378ADD; --hobby: #D85A30; --health: #23A065;
+  --skill-t: #C98200; --job-t: #2F7BCF; --hobby-t: #D2552B; --health-t: #1E8A57;
   --bayang: 0 1px 3px rgba(14, 21, 37, .06); --angkat: 0 14px 34px -16px rgba(14, 21, 37, .32);
   --f-judul: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
   --f-teks: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -28,12 +28,12 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0B0F17; --panel: #121826; --panel-2: #182032; --ink: #E8ECF3; --ink-2: #C7CEDA; --redup: #8E98AA;
   --garis-ui: #232C3E; --garis-kuat: #36425C; --titik: rgba(232, 236, 243, .055);
-  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659;
+  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659; --health-t: #5ED69A;
   --bayang: 0 1px 0 rgba(0, 0, 0, .3); --angkat: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0B0F17; --panel: #121826; --panel-2: #182032; --ink: #E8ECF3; --ink-2: #C7CEDA; --redup: #8E98AA;
   --garis-ui: #232C3E; --garis-kuat: #36425C; --titik: rgba(232, 236, 243, .055);
-  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659;
+  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659; --health-t: #5ED69A;
   --bayang: 0 1px 0 rgba(0, 0, 0, .3); --angkat: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark }
 * { box-sizing: border-box }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15.5px/1.55 var(--f-teks); -webkit-font-smoothing: antialiased;
@@ -53,8 +53,8 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .fi { display: inline-block; margin: 0 .035em }
 .fi b { display: block; width: .17em; height: .5em; background: currentColor; border-radius: .025em; margin: 0 auto }
 .fi i { display: block; width: .21em; height: .21em; border-radius: 50%; margin: .07em auto 0; background: var(--titik-logo); transition: background .3s }
-.pop { animation: pop 3.6s infinite }
-@keyframes pop { 0% { background: #F5A300; transform: scale(0) } 5% { transform: scale(1.25) } 9%, 29% { background: #F5A300; transform: scale(1) } 33.3% { background: #F5A300; transform: scale(0) } 33.4% { background: #378ADD } 38% { transform: scale(1.25) } 42%, 62% { background: #378ADD; transform: scale(1) } 66.6% { background: #378ADD; transform: scale(0) } 66.7% { background: #D85A30 } 71% { transform: scale(1.25) } 75%, 95% { background: #D85A30; transform: scale(1) } 100% { background: #D85A30; transform: scale(0) } }
+.pop { animation: pop 4.8s infinite }
+@keyframes pop { 0% { background: #F5A300; transform: scale(0) } 3.75% { transform: scale(1.25) } 6.75%, 21.75% { background: #F5A300; transform: scale(1) } 24.9% { background: #F5A300; transform: scale(0) } 25% { background: #378ADD; transform: scale(0) } 28.75% { transform: scale(1.25) } 31.75%, 46.75% { background: #378ADD; transform: scale(1) } 49.9% { background: #378ADD; transform: scale(0) } 50% { background: #D85A30; transform: scale(0) } 53.75% { transform: scale(1.25) } 56.75%, 71.75% { background: #D85A30; transform: scale(1) } 74.9% { background: #D85A30; transform: scale(0) } 75% { background: #23A065; transform: scale(0) } 78.75% { transform: scale(1.25) } 81.75%, 96.75% { background: #23A065; transform: scale(1) } 100% { background: #23A065; transform: scale(0) } }
 .pilih-dot { animation: popsekali .45s cubic-bezier(.3, 1.6, .5, 1) }
 @keyframes popsekali { 0% { transform: scale(0) } 100% { transform: scale(1) } }
 
@@ -81,7 +81,8 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .sek { margin-top: 34px }
 .sek-judul { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 14px }
 .sek-judul h2 { font-size: 26px }
-.produk { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px }
+.produk { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px }
+@media (max-width: 1080px) { .produk { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
 .p-kartu { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 20px; background: var(--panel); border: 1px solid var(--garis-ui); box-shadow: var(--bayang); text-decoration: none; transition: transform .18s, box-shadow .18s, border-color .18s }
 .p-kartu:hover { transform: translateY(-3px); box-shadow: var(--angkat) }
 .p-kartu.sorot { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 30%, transparent), var(--angkat) }
@@ -119,13 +120,14 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   <section class="hero">
     <span class="label">Buat kamu yang baru mulai</span>
     <h1 class="wm besar" aria-label="get it"><span class="kap">get</span>&nbsp;<span class="fi"><b></b><i class="pop" id="titik-besar"></i></span>t</h1>
-    <p class="lead">Skill, kerja, dan hobi. Tiga tempat buat mulai, satu keluarga.</p>
+    <p class="lead">Skill, kerja, hobi, dan sehat. Empat tempat buat mulai, satu keluarga.</p>
     <div>
       <div class="label" style="margin-bottom:8px">Lagi butuh apa?</div>
       <div class="pilihan" id="pilihan">
         <button data-p="skill" aria-pressed="false"><span class="bul" style="background:var(--skill)"></span>Belajar skill kerja</button>
         <button data-p="job" aria-pressed="false"><span class="bul" style="background:var(--job)"></span>Cari lowongan</button>
         <button data-p="hobby" aria-pressed="false"><span class="bul" style="background:var(--hobby)"></span>Nemu hobi baru</button>
+        <button data-p="health" aria-pressed="false"><span class="bul" style="background:var(--health)"></span>Hidup lebih sehat</button>
       </div>
     </div>
   </section>
@@ -157,19 +159,28 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
         <ul><li>Catur, gitar, piano, drum</li><li>Menggambar dan fotografi</li><li>Kuis dan tantangan 7 hari</li></ul>
         <span class="buka">Buka get a hobby →</span>
       </a>
+      <a class="p-kartu" id="k-health" href="../get-a-health/" style="--c:var(--health);--ct:var(--health-t)">
+        <span class="status">Baru</span>
+        <img src="favicon-health.svg" alt="">
+        <span class="wm"><span class="kap">get</span> <span class="aks">a</span> health<span class="aks">.</span></span>
+        <p>Kebiasaan sehat kecil yang diulang tiap hari, pakai angka dari WHO dan Kemenkes.</p>
+        <ul><li>Ceklis harian dan streak</li><li>Napas, jam tidur, Isi Piringku</li><li>Gerak 5 menit dan cek mood</li></ul>
+        <span class="buka">Buka get a health →</span>
+      </a>
     </div>
   </section>
 
   <section class="sek cerita">
     <div>
       <h3>Satu titik, banyak warna.</h3>
-      <p>Titik di huruf i yang dibalik itu ganti warna sesuai yang lagi kamu kejar. Amber buat skill, biru buat kerja, oranye bata buat hobi. Nanti ada produk baru, tinggal nambah warna.</p>
+      <p>Titik di huruf i yang dibalik itu ganti warna sesuai yang lagi kamu kejar. Amber buat skill, biru buat kerja, oranye bata buat hobi, hijau buat sehat. Nanti ada produk baru, tinggal nambah warna.</p>
     </div>
     <div class="keluarga">
       <span class="wm"><span class="kap">get</span>&nbsp;<span class="fi"><b></b><i class="pop"></i></span>t</span>
       <span class="wm" style="--ct:var(--skill-t)"><span class="kap">get</span> <span class="aks">a</span> skill<span class="aks">.</span></span>
       <span class="wm" style="--ct:var(--job-t)"><span class="kap">get</span> <span class="aks">a</span> job<span class="aks">.</span></span>
       <span class="wm" style="--ct:var(--hobby-t)"><span class="kap">get</span> <span class="aks">a</span> hobby<span class="aks">.</span></span>
+      <span class="wm" style="--ct:var(--health-t)"><span class="kap">get</span> <span class="aks">a</span> health<span class="aks">.</span></span>
     </div>
   </section>
 
@@ -185,7 +196,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
     const t = gelap ? 'light' : 'dark'; pasang(t); try { localStorage.setItem('getit-tema', t) } catch (e) {}
   }
   // pilih kebutuhan: titik logo ikut warna produk, kartunya disorot
-  const W = { skill: '#F5A300', job: '#378ADD', hobby: '#D85A30' }
+  const W = { skill: '#F5A300', job: '#378ADD', hobby: '#D85A30', health: '#23A065' }
   const titik = document.getElementById('titik-besar')
   const btn = [...document.querySelectorAll('#pilihan button')]
   btn.forEach(b => b.onclick = () => {
@@ -199,7 +210,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   })
   // favicon ikut gonta-ganti warna titik
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const fav = document.getElementById('fav'), urut = ['favicon-getit-amber.svg', 'favicon-getit-biru.svg', 'favicon-getit-oranye.svg']
+    const fav = document.getElementById('fav'), urut = ['favicon-getit-amber.svg', 'favicon-getit-biru.svg', 'favicon-getit-oranye.svg', 'favicon-getit-hijau.svg']
     let i = 0; setInterval(() => { if (document.hidden || !fav) return; fav.href = urut[i]; i = (i + 1) % urut.length }, 1200)
   }
 })()
