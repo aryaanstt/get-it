@@ -16,8 +16,8 @@
 :root {
   --bg: #F2F4F7; --panel: #FFFFFF; --panel-2: #F6F7F9; --ink: #0E1525; --ink-2: #2A3245; --redup: #5B6577;
   --garis-ui: #DFE3EA; --garis-kuat: #C3CAD6; --titik: rgba(14, 21, 37, .075);
-  --skill: #F5A300; --job: #378ADD; --hobby: #D85A30; --health: #23A065;
-  --skill-t: #C98200; --job-t: #2F7BCF; --hobby-t: #D2552B; --health-t: #1E8A57;
+  --skill: #F5A300; --job: #378ADD; --hobby: #7B4FD6; --health: #23A065;
+  --skill-t: #C98200; --job-t: #2F7BCF; --hobby-t: #6A3FC4; --health-t: #1E8A57;
   --bayang: 0 1px 3px rgba(14, 21, 37, .06); --angkat: 0 14px 34px -16px rgba(14, 21, 37, .32);
   --f-judul: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
   --f-teks: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -28,12 +28,12 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0B0F17; --panel: #121826; --panel-2: #182032; --ink: #E8ECF3; --ink-2: #C7CEDA; --redup: #8E98AA;
   --garis-ui: #232C3E; --garis-kuat: #36425C; --titik: rgba(232, 236, 243, .055);
-  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659; --health-t: #5ED69A;
+  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #B39BFF; --health-t: #5ED69A;
   --bayang: 0 1px 0 rgba(0, 0, 0, .3); --angkat: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0B0F17; --panel: #121826; --panel-2: #182032; --ink: #E8ECF3; --ink-2: #C7CEDA; --redup: #8E98AA;
   --garis-ui: #232C3E; --garis-kuat: #36425C; --titik: rgba(232, 236, 243, .055);
-  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #EE8659; --health-t: #5ED69A;
+  --skill-t: #FFB224; --job-t: #6AABEE; --hobby-t: #B39BFF; --health-t: #5ED69A;
   --bayang: 0 1px 0 rgba(0, 0, 0, .3); --angkat: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark }
 * { box-sizing: border-box }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15.5px/1.55 var(--f-teks); -webkit-font-smoothing: antialiased;
@@ -54,7 +54,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .fi b { display: block; width: .17em; height: .5em; background: currentColor; border-radius: .025em; margin: 0 auto }
 .fi i { display: block; width: .21em; height: .21em; border-radius: 50%; margin: .07em auto 0; background: var(--titik-logo); transition: background .3s }
 .pop { animation: pop 4.8s infinite }
-@keyframes pop { 0% { background: #F5A300; transform: scale(0) } 3.75% { transform: scale(1.25) } 6.75%, 21.75% { background: #F5A300; transform: scale(1) } 24.9% { background: #F5A300; transform: scale(0) } 25% { background: #378ADD; transform: scale(0) } 28.75% { transform: scale(1.25) } 31.75%, 46.75% { background: #378ADD; transform: scale(1) } 49.9% { background: #378ADD; transform: scale(0) } 50% { background: #D85A30; transform: scale(0) } 53.75% { transform: scale(1.25) } 56.75%, 71.75% { background: #D85A30; transform: scale(1) } 74.9% { background: #D85A30; transform: scale(0) } 75% { background: #23A065; transform: scale(0) } 78.75% { transform: scale(1.25) } 81.75%, 96.75% { background: #23A065; transform: scale(1) } 100% { background: #23A065; transform: scale(0) } }
+@keyframes pop { 0% { background: #F5A300; transform: scale(0) } 3.75% { transform: scale(1.25) } 6.75%, 21.75% { background: #F5A300; transform: scale(1) } 24.9% { background: #F5A300; transform: scale(0) } 25% { background: #378ADD; transform: scale(0) } 28.75% { transform: scale(1.25) } 31.75%, 46.75% { background: #378ADD; transform: scale(1) } 49.9% { background: #378ADD; transform: scale(0) } 50% { background: #7B4FD6; transform: scale(0) } 53.75% { transform: scale(1.25) } 56.75%, 71.75% { background: #7B4FD6; transform: scale(1) } 74.9% { background: #7B4FD6; transform: scale(0) } 75% { background: #23A065; transform: scale(0) } 78.75% { transform: scale(1.25) } 81.75%, 96.75% { background: #23A065; transform: scale(1) } 100% { background: #23A065; transform: scale(0) } }
 .pilih-dot { animation: popsekali .45s cubic-bezier(.3, 1.6, .5, 1) }
 @keyframes popsekali { 0% { transform: scale(0) } 100% { transform: scale(1) } }
 
@@ -173,7 +173,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   <section class="sek cerita">
     <div>
       <h3>Satu titik, banyak warna.</h3>
-      <p>Titik di huruf i yang dibalik itu ganti warna sesuai yang lagi kamu kejar. Amber buat skill, biru buat kerja, oranye bata buat hobi, hijau buat sehat. Nanti ada produk baru, tinggal nambah warna.</p>
+      <p>Titik di huruf i yang dibalik itu ganti warna sesuai yang lagi kamu kejar. Amber buat skill, biru buat kerja, ungu buat hobi, hijau buat sehat. Nanti ada produk baru, tinggal nambah warna.</p>
     </div>
     <div class="keluarga">
       <span class="wm"><span class="kap">get</span>&nbsp;<span class="fi"><b></b><i class="pop"></i></span>t</span>
@@ -196,7 +196,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
     const t = gelap ? 'light' : 'dark'; pasang(t); try { localStorage.setItem('getit-tema', t) } catch (e) {}
   }
   // pilih kebutuhan: titik logo ikut warna produk, kartunya disorot
-  const W = { skill: '#F5A300', job: '#378ADD', hobby: '#D85A30', health: '#23A065' }
+  const W = { skill: '#F5A300', job: '#378ADD', hobby: '#7B4FD6', health: '#23A065' }
   const titik = document.getElementById('titik-besar')
   const btn = [...document.querySelectorAll('#pilihan button')]
   btn.forEach(b => b.onclick = () => {
@@ -210,7 +210,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   })
   // favicon ikut gonta-ganti warna titik
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const fav = document.getElementById('fav'), urut = ['favicon-getit-amber.svg', 'favicon-getit-biru.svg', 'favicon-getit-oranye.svg', 'favicon-getit-hijau.svg']
+    const fav = document.getElementById('fav'), urut = ['favicon-getit-amber.svg', 'favicon-getit-biru.svg', 'favicon-getit-ungu.svg', 'favicon-getit-hijau.svg']
     let i = 0; setInterval(() => { if (document.hidden || !fav) return; fav.href = urut[i]; i = (i + 1) % urut.length }, 1200)
   }
 })()
